@@ -64,11 +64,18 @@ h3 {
 h1 {
   font-size: var(--fs-h1);
 }
+
 h2 {
   font-size: var(--fs-h2);
 }
+
 h3 {
   font-size: var(--fs-h3);
+}
+
+:focus {
+  outline: 4px solid;
+  outline-offset: 4px;
 }
 
 /* typography */
@@ -109,13 +116,15 @@ h3 {
     width: min-content;
     margin: 0 auto;
     grid-column-gap: 1em;
-    grid-template-areas: "img title" "img subtitle";
+    grid-template-areas: "img title""img subtitle";
     grid-template-columns: min-content max-content;
   }
+
   .intro_image {
     grid-area: img;
     min-width: 250px;
   }
+
   .section__subtitle-intro {
     align-self: start;
     grid-column: -1 / 1;
@@ -138,19 +147,44 @@ h3 {
   font-family: var(--ff-secondary);
 }
 
+.services {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 .service {
   max-width: 500px;
   margin: 0 auto;
+}
+
+.service h3 {
+  margin-bottom: 1em;
 }
 
 @media (min-width: 800px) {
   .services {
     display: flex;
     max-width: 1000px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .service + .service { 
+  .service+.service {
     margin-left: 2em;
   }
+}
+
+.btn {
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Who I Am section */
+
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
 }
