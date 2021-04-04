@@ -78,6 +78,9 @@ h3 {
   outline-offset: 4px;
 }
 
+/* header */
+
+
 /* typography */
 
 .section__title {
@@ -116,7 +119,7 @@ h3 {
     width: min-content;
     margin: 0 auto;
     grid-column-gap: 1em;
-    grid-template-areas: "img title""img subtitle";
+    grid-template-areas: "img title" "img subtitle";
     grid-template-columns: min-content max-content;
   }
 
@@ -169,7 +172,7 @@ h3 {
     margin-right: auto;
   }
 
-  .service+.service {
+  .service + .service {
     margin-left: 2em;
   }
 }
@@ -187,4 +190,32 @@ h3 {
 .about-me {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--clr-dark);
+  text-align: center;
+  padding: 2.5em 0;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+}
+
+.social-list_item {
+  padding: .3em;
+}
+
+@media (min-width: 800px) {
+  .social-list {
+    justify-content: center;
+    margin: 2em 0;
+  }
+  .social-list_item {
+    margin: 0 2em;
+  }
 }
